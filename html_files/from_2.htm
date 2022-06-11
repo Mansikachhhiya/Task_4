@@ -5,7 +5,7 @@
   <title>Form</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="/css_files/from_2.css">
-  <!-- <link href="/js_files/from_2.js"> -->
+
 </head>
 <script herf=""></script>
 
@@ -21,50 +21,51 @@
       </div>
       <div class="body_div">
         <div class="h_grp">
-          <!-- <lable>Full Name</lable> -->
+
           <h2 class="G_titles asterick">Full Name</h2>
           <div class="grp left">
-            <input type="text" id="fname" name="fname" size="40%" class="form-input">
+            <input type="text" id="fname" name="fname" size="40%" class="form-input" onblur="return fname_validate()">
             <p id="p1"></p>
             <label for="fname">First Name</label>
 
           </div>
 
           <div class="grp right">
-            <input type="text" id="lname" name="lname" size="40%" class="form-input">
+            <input type="text" id="lname" name="lname" size="40%" class="form-input" onblur="lname_validate()">
             <p id="p2"></p>
             <label for="lname">Last Name</label>
           </div>
           <hr class="hiddenHr">
           <div class="a_grp">
-            <!-- <label for="address">Address</label> -->
+
             <h2 class="G_titles asterick">Address</h2>
             <div class="f_grp">
-              <input type="text" id="staddress"name="staddress" size="40%" class="form-input">
+              <input type="text" id="staddress" name="staddress" size="40%" class="form-input" onblur="add1_validate()">
               <p id="p3"></p>
               <label for="staddresss">Street Address</label>
 
             </div>
             <div class="f_grp">
-              <input type="text" id="staddress2" name="staddress2" size="40%" class="form-input">
+              <input type="text" id="staddress2" name="staddress2" size="40%" class="form-input"
+                onblur="add2_validate()">
               <p id="p4"></p>
               <label for="staddresss2">Street Address Line 2</label>
             </div>
             <div class="h_grp">
               <div class="grp left">
-                <input type="text" id="city" name="city" size="40%" class="form-input">
+                <input type="text" id="city" name="city" size="40%" class="form-input" onblur="city_validate()">
                 <p id="p5"></p>
                 <label for="city">City</label>
               </div>
 
               <div class="grp right">
-                <input type="text" id="state" name="state" size="40%" class="form-input">
+                <input type="text" id="state" name="state" size="40%" class="form-input" onblur="state_validate()">
                 <p id="p6"></p>
                 <label for="state">State/Province</label>
               </div>
 
               <div class="f_grp">
-                <input type="text" id="zipcode" name="zipcode" size="40%" class="form-input">
+                <input type="text" id="zipcode" name="zipcode" size="40%" class="form-input" onblur="code_valiadte()">
                 <p id="p7"></p>
                 <label for="zipcode">Postal/Zipcode</label>
               </div>
@@ -72,16 +73,20 @@
               <div class="h_grp">
                 <h2 class="G_titles asterick">Phone number</h2>
                 <div class="grp left">
-                  <input type="tel" id="phoneno" name="phoneno" size="40%" class="form-input" placeholder="(000) 0000-000">
+                  <input type="tel" id="phoneno" name="phoneno" size="40%" class="form-input"
+                    placeholder="(000) 0000-000" onblur="phoneno_validate()">
                   <p id="p8"></p>
-                  <!-- <label for="phoneno">Phone number</label> -->
+                  <label for="email">(000) 0000-000</label>
+
+
                 </div>
               </div>
               <hr class="hiddenHr">
               <div class="h_grp">
                 <h2 class="G_titles">Email</h2>
                 <div class="grp left">
-                  <input type="text" id="email" name="email" size="40%" class="form-input" placeholder="ex:email@yahoo.com">
+                  <input type="text" id="email" name="email" size="40%" class="form-input"
+                    placeholder="ex:email@yahoo.com" onblur="email_validate()">
                   <p id="p9"></p>
                   <label for="email">Example@example.com</label>
 
@@ -92,8 +97,7 @@
               <div class="h_grp">
                 <h2 class="G_titles">How did you here about us</h2>
                 <div class="grp left">
-                  <!-- <input type="text" name="email" size="40%" class="form-input" placeholder="ex:email@yahoo.com">
-                <label for="email">Example@example.com</label> -->
+
                   <select name="foundus" id="foundus" class="form-input">
                     <option value="magazine">Magazine</option>
                     <option value="newspaper">Newspaper</option>
@@ -101,43 +105,38 @@
                     <option value="friend">Friend</option>
                     <option value="other">Other</option>
                   </select>
-                  
+
                 </div>
 
               </div>
 
               <hr class="hiddenHr">
               <div class="h_grp">
-                <!-- <label for="address">Address</label> -->
+
                 <h2 class="G_titles">Feedback about us</h2>
                 <div class="f_grp">
                   <textarea id="feedback" class="form-input t_area" rows="7" onblur="return feed_back()"></textarea>
                   <p id="p10"></p>
-                  <!-- <input type="text" name="staddress" size="40%" class="form-input"> -->
-                  <!-- <label for="staddresss">Street Address</label> -->
+
                 </div>
 
                 <hr class="hiddenHr">
                 <div class="h_grp">
-                  <!-- <label for="address">Address</label> -->
+
                   <h2 class="G_titles">Suggestion for any further imporovement</h2>
                   <div class="f_grp">
-                    <textarea id="suggestion" class="form-input t_area" rows="7" onblur="return sugges_tion()"></textarea>
+                    <textarea id="suggestion" class="form-input t_area" rows="7"
+                      onblur="return sugges_tion()"></textarea>
                     <p id="p11"></p>
-                    <!-- <input type="text" name="staddress" size="40%" class="form-input"> -->
-                    <!-- <label for="staddresss">Street Address</label> -->
+
                   </div>
 
                   <hr class="hiddenHr">
-                   <div class="h_grp">
-                    <!-- <label for="address">Address</label> -->
-                    <!-- <h2 class="G_titles">Will you be willing to recommand us</h2> -->
+                  <div class="h_grp">
+
                     <div class="f_grp">
-                      <!-- <textarea class="form-input t_area" rows="7"></textarea> -->
-                      <!-- <input type="text" name="staddress" size="40%" class="form-input"> -->
-                      <!-- <label for="staddresss">Street Address</label> -->
-                      <label class="r_check">Will you be willing to recommand us<input type="checkbox"
-                          name="check" id="check"></label>
+                      <label class="r_check">Will you be willing to recommand us<input type="checkbox" name="check"
+                          id="check"></label>
                     </div>
 
                     <hr class="hiddenHr">
@@ -156,14 +155,12 @@
                     <hr class="hiddenHr">
                     <hr class="hiddenHr">
                     <div class="h_grp">
-                      <!-- <label for="address">Address</label> -->
-                      <!-- <h2 class="G_titles">Suggestion for any further imporovement</h2> -->
+
                       <div class="f_grp">
-                        <!-- <textarea class="form-input t_area" rows="7"></textarea> -->
 
                         <hr class="hiddenHr">
                         <hr class="hiddenHr">
-                        <!-- <hr class="hiddenHr"> -->
+
                         <table>
                           <form>
                             <tr>
@@ -193,7 +190,7 @@
                 </div>
 
               </div>
-              <input type="submit" value="Submit" class="submit_class">
+              <button type="button" value="Submit" class="submit_class" onclick="return validate()">sumbit</button>
             </div>
             <script src="/js_files/from_2.js"></script>
 </body>
