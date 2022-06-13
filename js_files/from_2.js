@@ -8,8 +8,9 @@ let state=document.getElementById("state");
 let code=document.getElementById("zipcode");
 let phoneno=document.getElementById("phoneno");
 let email= document.getElementById("email");
+let gender = document.getElementsByName("gender")    
 let Text;
-function validate(){
+function validate(event){
      event.preventDefault();
     // let fname=document.getElementById("fname");
     // let lname=document.getElementById("lname");
@@ -87,9 +88,36 @@ function validate(){
        
         document.getElementById("p11").innerHTML= Text1;
     }
-
+    // if(document.getElementById('male').checked) { 
+    //     // document.getElementById("disp").innerHTML 
+    //     //     = document.getElementById("male").value 
+    //     //     + " radio button is checked"; 
+    // } 
+    // // else if(document.getElementById('female').checked) { 
+    // //     // document.getElementById("disp").innerHTML 
+    // //     //     = document.getElementById("female").value 
+    // //     //     + " radio button is checked";   
+    // // } 
+    // // else if(document.getElementById('other').checked) { 
+    // //     // document.getElementById("disp").innerHTML 
+    // //     //     = document.getElementById("other").value 
+    //     //     + " radio button is checked";   
+    // // } 
+    
+    // else { 
+    //     document.getElementById("p12").innerHTML 
+    //         = "You have not selected any season"; 
+    // } 
+    if (document.getElementsByName("gender").checked = false) {    
+        document.getElementById("p12").innerHTML 
+        = "Gender is requried";      
+    } 
+    // else{
+    //     document.getElementById("p12").innerHTML 
+    //     = "Gender is requried"; 
+    // }   
 }
-function fname_validate(){
+function fname_validate(event){
     event.preventDefault();
     let fname=document.getElementById("fname");
     let Text;
@@ -101,7 +129,7 @@ function fname_validate(){
     }
 
 }
-function lname_validate(){
+function lname_validate(event){
     event.preventDefault();
     let name2_pattren = "[a-zA-Z]{2,30}$";
     if(!lname.value.match(name2_pattren))
@@ -111,7 +139,7 @@ function lname_validate(){
     }
 
 }
-function add1_validate(){
+function add1_validate(event){
     event.preventDefault();
     let add1_pattren = "[A-Za-z0-9'\.\-\s\,]{2,100}$"
     if(!add1.value.match(add1_pattren))
@@ -121,7 +149,7 @@ function add1_validate(){
     }
 
 }
-function add2_validate(){
+function add2_validate(event){
     event.preventDefault();
     let add2_pattren = "[A-Za-z0-9'\.\-\s\,]{2,100}$"
     if(!add2.value.match(add2_pattren))
@@ -130,7 +158,7 @@ function add2_validate(){
         document.getElementById("p4").innerHTML=Text;
     }
 }
-function city_validate(){
+function city_validate(event){
     event.preventDefault();
     let city_pattern = "[a-zA-Z]{2,30}$";
     if(!city.value.match(city_pattern))
@@ -139,7 +167,7 @@ function city_validate(){
         document.getElementById("p5").innerHTML=Text;
     }
 }
-function state_validate(){
+function state_validate(event){
     event.preventDefault();
     let state_pattern = "[a-zA-Z]{2,30}$";
     if(!state.value.match(state_pattern))
@@ -149,7 +177,7 @@ function state_validate(){
     }
 
 }
-function code_valiadte(){
+function code_valiadte(event){
     event.preventDefault();
     let code_pattern="^[0-9]{6}$";
     if(!code.value.match(code_pattern))
@@ -159,7 +187,7 @@ function code_valiadte(){
     }
 
 }
-function phoneno_validate(){
+function phoneno_validate(event){
     event.preventDefault();
     let phoneno_pattern="\(([0-9]{3})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{3})$";
     if(!phoneno.value.match(phoneno_pattern))
@@ -169,7 +197,7 @@ function phoneno_validate(){
     }
 
 }
-function email_validate(){
+function email_validate(event){
     event.preventDefault();
     let email_pattren="/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/";
     if(!email.value.match(email_pattren))
@@ -180,7 +208,7 @@ function email_validate(){
 
 }
 
-function feed_back(){
+function feed_back(event){
     event.preventDefault();
     let feedback= document.getElementById("feedback");
     
@@ -191,7 +219,7 @@ function feed_back(){
     }
 
 }
-function sugges_tion()
+function sugges_tion(event)
 {
     event.preventDefault();
     let suggestion= document.getElementById("suggestion");
@@ -202,3 +230,25 @@ function sugges_tion()
         document.getElementById("p11").innerHTML="please Enter suggestion";
     }
 }
+// function checkButton(event) { 
+
+//     if(document.getElementById('male').checked) { 
+//         document.getElementById("disp").innerHTML 
+//             = document.getElementById("male").value 
+//             + " radio button is checked"; 
+//     } 
+//     else if(document.getElementById('female').checked) { 
+//         document.getElementById("disp").innerHTML 
+//             = document.getElementById("female").value 
+//             + " radio button is checked";   
+//     } 
+//     else if(document.getElementById('other').checked) { 
+//         document.getElementById("disp").innerHTML 
+//             = document.getElementById("other").value 
+//             + " radio button is checked";   
+//     } 
+    
+//     else { 
+//         document.getElementById("error").innerHTML 
+//             = "You have not selected any season"; 
+//     } 
