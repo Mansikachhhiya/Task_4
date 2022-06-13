@@ -107,15 +107,20 @@ function validate(event){
     // else { 
     //     document.getElementById("p12").innerHTML 
     //         = "You have not selected any season"; 
-    // } 
-    if (document.getElementsByName("gender").checked = false) {    
-        document.getElementById("p12").innerHTML 
-        = "Gender is requried";      
-    } 
-    // else{
-    //     document.getElementById("p12").innerHTML 
-    //     = "Gender is requried"; 
-    // }   
+    var radios = document.getElementsByName("gender");
+    var formValid = false;
+
+    var i = 0;
+    while (!formValid && i < radios.length) {
+        if (radios[i].checked) formValid = true;
+        i++;        
+    }
+
+    if (!formValid)  {
+    document.getElementById("p12").innerHTML 
+           = "Please select any of the given options"; 
+  }
+   
 }
 function fname_validate(event){
     event.preventDefault();
